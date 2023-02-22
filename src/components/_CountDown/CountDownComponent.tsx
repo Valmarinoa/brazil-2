@@ -29,19 +29,19 @@ const CountDownComponent = () => {
     <Counter>
       <CounterContainer>
         Días
-        <H2Counters>{dias}</H2Counters>
+        <H2Counters>0</H2Counters>
       </CounterContainer>
       <CounterContainer>
         Hrs
-        <H2Counters>{horas}</H2Counters>
+        <H2Counters>0</H2Counters>
       </CounterContainer>
       <CounterContainer>
         Min
-        <H2Counters>{minutos}</H2Counters>
+        <H2Counters>0</H2Counters>
       </CounterContainer>
       <CounterContainer>
         Sec
-        <H2Counters>{segundos}</H2Counters>
+        <H2Counters>0</H2Counters>
       </CounterContainer>
     </Counter>
   );
