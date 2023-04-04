@@ -69,7 +69,7 @@ const FormComponent = ({ handleSuccess }: _SubmitProps) => {
           />
 
           <Submit type="submit">
-            <div>Say </div> <div>I love you</div>{" "}
+            <div>Vambora</div>{" "}
           </Submit>
           {/* <label>Name:</label>
           <Field type="text" name='name' autoComplete='off' />

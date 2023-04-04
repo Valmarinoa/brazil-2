@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import senoras from './senoras-felices.png'
+import senoras from "./cc.gif";
 
 export const Container = styled.div`
   color: #000;
@@ -24,14 +24,14 @@ export const P = styled.p`
 `
 
 export const Senoras = styled.div`
-background-image: url(${senoras});
-background-repeat: no-repeat;
-    background-size: contain;
-    width: 120px;
-    height: 110px;
-    object-fit: contain;
-    /* background-color: red; */
-`
+  background-image: url(${senoras});
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 120px;
+  height: 161px;
+  object-fit: contain;
+  /* background-color: red; */
+`;
 
 
 export const H4 = styled.h4`
