@@ -5,7 +5,7 @@ import {Footer, H2, H2Middle} from './styles'
 const FooterComponent = () => {
   return (
     <Footer>
-      <H2>Jul 20</H2>
+      <H2>Jan 20</H2>
       <H2Middle></H2Middle>
       <H2>Vamos ver</H2>
     </Footer>

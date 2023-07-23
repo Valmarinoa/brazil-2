@@ -8,7 +8,7 @@ const CountDownComponent = () => {
   const [segundos, setSegundos] = useState<number>();
 
   const contador = function () {
-    var diaFinal = new Date("Jul 20, 2023").getTime();
+    var diaFinal = new Date("Jan 20, 2024").getTime();
     var hoy = new Date().getTime();
     var falta = diaFinal - hoy;
     setDias(Math.floor(falta / (1000 * 60 * 60 * 24)));
