@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import image from '../../assets/image1.jpeg'
+import image from "../../assets/image1.png";
 
 interface _MatrixProps {
   $initialX: number;

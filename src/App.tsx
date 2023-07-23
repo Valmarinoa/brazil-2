@@ -27,50 +27,48 @@ const matrix: Array<number[]> = [
 const App = () => {
   const [distance, setDistance] = useState<number>(1)
   const [showModal, setShowModal] = useState<boolean>(false)
-  const [message, setMessage] = useState<string>("Olha com ela vem!")
-  const firstMessage = "Olha com ela vem.."
-  const secondMessage = "Nosssa, UAL."
+  const [message, setMessage] = useState<string>("Olha como ela vem!");
+  const firstMessage = "Olha como ela vem..";
+  const secondMessage = "Nosssa, UAL.";
 
   //calculate the distance between the cursor and the center/middle of the browser
   // Math.pow(i, z) uses the first argument as a base(num) and takes that to the power of the given exponent(3)
   // https://easings.net/#easeInCubic
-  const easing = (num: number) => Math.pow(num, 3)
- 
-  const calculateDistance = ([x, y]: Array<number>) => {
+  const easing = (num: number) => Math.pow(num, 3);
 
+  const calculateDistance = ([x, y]: Array<number>) => {
     // Find the position(coordinates: x,y) of the cursor in the window browser.
     // Use Hypotheneuse to find the shortest distance between the cursor and the center of the browser.
     // const distance calculates the distance as a percentage, based off the current value and the max. value
     // ..giving a number between 0 ---> 1
-    const center = [window.innerWidth / 2, window.innerHeight / 2]
-    const maxHypot = Math.hypot(center[0], center[1])
-    const hypot = Math.hypot(center[0] - x, center[1] - y)
-    const distance = hypot / maxHypot
+    const center = [window.innerWidth / 2, window.innerHeight / 2];
+    const maxHypot = Math.hypot(center[0], center[1]);
+    const hypot = Math.hypot(center[0] - x, center[1] - y);
+    const distance = hypot / maxHypot;
 
-    const easeDistance = easing(distance)
-    setDistance(easeDistance)
-  }
+    const easeDistance = easing(distance);
+    setDistance(easeDistance);
+  };
 
   // returns mouse pointer position values x, y
   const handleMove = ({ clientX, clientY }: _Clients) => {
-    calculateDistance([clientX, clientY])
-  }
+    calculateDistance([clientX, clientY]);
+  };
 
-  const handleTouchMove:React.TouchEventHandler = ({touches}) => {
-    calculateDistance([touches[0].clientX, touches[0].clientY])
-  }
+  const handleTouchMove: React.TouchEventHandler = ({ touches }) => {
+    calculateDistance([touches[0].clientX, touches[0].clientY]);
+  };
 
   const toggleModal = () => {
-    setShowModal((showModal => !showModal))
-  }
+    setShowModal((showModal) => !showModal);
+  };
 
-  const toggleMessageIn:React.MouseEventHandler = () => {
-    setMessage(()=> secondMessage)
-  }
-  const toggleMessageOut:React.MouseEventHandler = () => {
-    setMessage(()=> firstMessage)
-  }
-
+  const toggleMessageIn: React.MouseEventHandler = () => {
+    setMessage(() => secondMessage);
+  };
+  const toggleMessageOut: React.MouseEventHandler = () => {
+    setMessage(() => firstMessage);
+  };
 
   return (
     <>
@@ -100,9 +98,12 @@ const App = () => {
             <ImgBox key={i} x={x} y={y} percent={distance} />
           ))}
 
-          <Author $isTogether={distance < 0.001}>
-            Photographer: Tinko Czetwertynski
-          </Author>
+          <a
+            target="_blank"
+            href="https://www.instagram.com/p/Cq56J3brN9k/?img_index=1"
+          >
+            <Author $isTogether={distance < 0.001}>Artist: Luna Bastos</Author>
+          </a>
         </ImageContainer>
       </Wrapper>
     </>
