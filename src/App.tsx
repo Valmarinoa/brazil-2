@@ -98,10 +98,7 @@ const App = () => {
             <ImgBox key={i} x={x} y={y} percent={distance} />
           ))}
 
-          <a
-            target="_blank"
-            href="https://www.instagram.com/p/Cq56J3brN9k/?img_index=1"
-          >
+          <a href="https://www.instagram.com/p/Cq56J3brN9k/?img_index=1">
             <Author $isTogether={distance < 0.001}>Artist: Luna Bastos</Author>
           </a>
         </ImageContainer>
